@@ -1,5 +1,5 @@
 <section class="content bg-primary">
-	<div class="rsvp-container">
+	<div class="Card bg-white">
 
 		<h2 class="heading-5">
 			Reserve Your Seat

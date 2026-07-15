@@ -7,7 +7,8 @@
 	--color-primary: #FAF8F3;
 	--color-secondary: #FFFFFF;
     --color-teritary: #556B4F;
-    --color-accent:#7b8763
+    --color-accent:#7b8763;
+    --color-whiter: #faf8f3
 }
 
 html {
@@ -26,6 +27,15 @@ html {
 	font-weight:500;
 	color:var(--color-teritary);
 	margin-bottom:1rem;
+}
+
+.heading-2 {
+	display:block;
+	margin-top:1rem;
+	font-size:.9rem;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	color:#777;
 }
 
 .heading-3 {
@@ -49,6 +59,13 @@ html {
     letter-spacing:3px;
     font-size:.9rem;
     margin-bottom:1rem;
+}
+
+.closing-text{
+	margin-top:2rem;
+	font-style:italic;
+	color:#556B4F;
+	font-size:1rem;
 }
 
 .btn-variant-filled {
@@ -92,6 +109,17 @@ html {
     transform:translateY(-2px);
 }
 
+.Card{
+	max-width:700px;
+	margin:auto;
+	text-align:center;
+	padding:4rem;
+	border-radius:24px;
+	border:1px solid rgba(85,107,79,.12);
+	box-shadow:
+		0 20px 45px rgba(0,0,0,.05);
+
+}
 
 .hero-scroll{
     display:flex;
@@ -108,7 +136,6 @@ html {
     0%{transform:translateY(0);}
     50%{transform:translateY(-8px);}
     100%{transform:translateY(0);}
-
 }
 
 @keyframes scroll{
@@ -132,7 +159,6 @@ html {
 
 }
 
-
 .countdown-container{
 	display:flex;
 	justify-content:center;
@@ -142,21 +168,6 @@ html {
 }
 
 
-.item {
-	display:block;
-	margin-top:1rem;
-	font-size:.9rem;
-	letter-spacing:2px;
-	text-transform:uppercase;
-	color:#777;
-}
-
-.countdown-divider{
-	width:1px;
-	height:70px;
-	background:#D6D6D6;
-}
-
 @media (max-width:768px){
 
 	.countdown-container{
@@ -164,10 +175,6 @@ html {
 		grid-template-columns:repeat(2,1fr);
 		gap:2rem;
 
-	}
-
-	.countdown-divider{
-        display:none;
 	}
 
 	.countdown-title{
@@ -180,10 +187,6 @@ html {
 
 }
 
-
-
-
-
 .venue-title{
     font-family:"Cormorant Garamond",serif;
     font-size:3rem;
@@ -195,19 +198,6 @@ html {
     line-height:2;
     color:#555;
     font-size:1.1rem;
-}
-
-
-.rsvp-container{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:4rem;
-    border-radius:24px;
-    border:1px solid rgba(85,107,79,.12);
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.06);
-
 }
 
 .rsvp-form{
@@ -268,100 +258,6 @@ html {
     cursor:pointer;
 }
 
-
-
-
-
-@media (max-width:768px){
-
-    .rsvp-container{
-        padding:2rem;
-    }
-
-    .rsvp-title{
-        font-size:2.3rem;
-    }
-            
-}
-
-
-
-.marriage-list-container{
-	max-width:700px;
-	margin:auto;
-	text-align:center;
-	padding:4rem;
-	border-radius:24px;
-	background:#faf8f3;
-	border:1px solid rgba(85,107,79,.12);
-	box-shadow:
-		0 20px 45px rgba(0,0,0,.05);
-
-}
-
-
-
-.marriage-list-title{
-	font-family:"Cormorant Garamond", serif;
-	font-size:3rem;
-	font-weight:500;
-	color:#556B4F;
-	margin-bottom:2rem;
-}
-
-
-
-.marriage-list-closing{
-	margin-top:2rem;
-	font-style:italic;
-	color:#556B4F;
-	font-size:1rem;
-}
-
-.marriage-list-button{
-	display:inline-block;
-	margin-top:2.5rem;
-	padding:1rem 2.5rem;
-	border-radius:50px;
-	text-decoration:none;
-	background:#556B4F;
-	color:white;
-	transition:.3s;
-}
-
-.marriage-list-button:hover{
-	background:#68785f;
-	transform:translateY(-2px);
-
-}
-
-@media (max-width:768px){
-
-	.marriage-list-container{
-		padding:2.5rem 2rem;
-	}
-
-	.marriage-list-title{
-		font-size:2.3rem;
-	}
-
-}
-
-.wish-money-number {
-	margin: 2rem auto;
-	padding: 1rem 2rem;
-	display: inline-block;
-
-	border: 1px solid #d8c8a5;
-	border-radius: 50px;
-
-	font-size: 1.8rem;
-	font-weight: 600;
-	letter-spacing: 0.2rem;
-
-	color: #8b6b3d;
-	background: rgba(255, 255, 255, 0.6);
-}
 
 .back-to-top {
 	position: fixed;

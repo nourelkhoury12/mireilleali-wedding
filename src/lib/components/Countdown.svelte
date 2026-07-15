@@ -54,28 +54,28 @@
 	<div class="contdown-container flex justify-center items-center gap-9 flex-wrap">
 		<div class="min-w-[120px]">
 			<h3 class="heading-3">{days}</h3>
-			<span class="item">Days</span>
+			<span class="heading-2">Days</span>
 		</div>
 
-		<div class="countdown-divider"></div>
+		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
 
 		<div>
 			<h3 class="heading-3">{hours}</h3>
-			<span class="item">Hours</span>
+			<span class="heading-2">Hours</span>
 		</div>
 
-		<div class="countdown-divider"></div>
+		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
 
 		<div>
 			<h3 class="heading-3">{minutes}</h3>
-			<span class="item">Minutes</span>
+			<span class="heading-2">Minutes</span>
 		</div>
 
-		<div class="countdown-divider"></div>
+		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
 
 		<div>
 			<h3 class="heading-3">{seconds}</h3>
-			<span class="item">Seconds</span>
+			<span class="heading-2">Seconds</span>
 		</div>
 
 	</div>
