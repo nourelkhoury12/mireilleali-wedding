@@ -51,32 +51,31 @@
 		Every moment brings us one step closer to celebrating together.
 	</p>
 
-	<div class="countdown-container">
-
-		<div class="countdown-item">
-			<h3>{days}</h3>
-			<span>Days</span>
+	<div class="contdown-container flex justify-center items-center gap-9 flex-wrap">
+		<div class="min-w-[120px]">
+			<h3 class="heading-3">{days}</h3>
+			<span class="item">Days</span>
 		</div>
 
 		<div class="countdown-divider"></div>
 
-		<div class="countdown-item">
-			<h3>{hours}</h3>
-			<span>Hours</span>
+		<div>
+			<h3 class="heading-3">{hours}</h3>
+			<span class="item">Hours</span>
 		</div>
 
 		<div class="countdown-divider"></div>
 
-		<div class="countdown-item">
-			<h3>{minutes}</h3>
-			<span>Minutes</span>
+		<div>
+			<h3 class="heading-3">{minutes}</h3>
+			<span class="item">Minutes</span>
 		</div>
 
 		<div class="countdown-divider"></div>
 
-		<div class="countdown-item">
-			<h3>{seconds}</h3>
-			<span>Seconds</span>
+		<div>
+			<h3 class="heading-3">{seconds}</h3>
+			<span class="item">Seconds</span>
 		</div>
 
 	</div>

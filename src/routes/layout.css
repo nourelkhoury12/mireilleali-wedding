@@ -2,15 +2,16 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-html {
-	scroll-behavior: smooth;
-}
 
 @theme {
 	--color-primary: #FAF8F3;
 	--color-secondary: #FFFFFF;
     --color-teritary: #556B4F;
     --color-accent:#7b8763
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 .content{
@@ -25,6 +26,15 @@ html {
 	font-weight:500;
 	color:var(--color-teritary);
 	margin-bottom:1rem;
+}
+
+.heading-3 {
+    font-size:4rem;
+	font-family:"Cormorant Garamond",serif;
+	font-weight:600;
+	color:#556B4F;
+	margin:0;
+	line-height:1;
 }
 
 .heading-4 {
@@ -82,50 +92,6 @@ html {
     transform:translateY(-2px);
 }
 
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
-    background: radial-gradient(circle at top,
-            #ffffff 0%,
-            #faf8f3 45%,
-            #f3efe6 100%);
-
-    overflow: hidden;
-}
-
-.hero-content{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:1rem;
-}
-
-.hero-card{
-    width:min(720px,95vw);
-    border-radius:18px;
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.05),
-
-        0 25px 60px rgba(0,0,0,.10);
-    animation:float 7s ease-in-out infinite;
-    transition:.4s;
-
-}
-
-.hero-card:hover{
-
-    transform:translateY(-6px) scale(1.01);
-
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
-    100%{transform:translateY(0);}
-
-}
 
 .hero-scroll{
     display:flex;
@@ -135,6 +101,13 @@ html {
     color:#6d775f;
     font-family:"Cormorant Garamond", serif;
     letter-spacing:1px;
+
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
 
 }
 
@@ -168,20 +141,8 @@ html {
 	flex-wrap:wrap;
 }
 
-.countdown-item{
-	min-width:120px;
-}
 
-.countdown-item h3{
-	font-size:4rem;
-	font-family:"Cormorant Garamond",serif;
-	font-weight:600;
-	color:#556B4F;
-	margin:0;
-	line-height:1;
-}
-
-.countdown-item span{
+.item {
 	display:block;
 	margin-top:1rem;
 	font-size:.9rem;

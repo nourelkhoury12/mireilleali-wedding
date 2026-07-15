@@ -3,12 +3,11 @@
 	import Invitation from '$lib/assets/invitation.png';
 </script>
 
-<section class="hero">
-
-	<div class="hero-content" in:fade={{ duration: 1000 }}>
+<section class="flex items-center justify-center overflow-hidden px-4 py-12 bg-[radial-gradient(circle_at_top,_#ffffff_0%,_#faf8f3_45%,_#f3efe6_100%)]">
+	<div class="flex flex-col items-center gap-4" in:fade={{ duration: 1000 }}>
 
 		<img src={Invitation} alt="Ali & Mireille Wedding Invitation"
-			class="hero-card"
+			 class="w-[min(720px,95vw)] rounded-[18px] shadow-[0_10px_25px_rgba(0,0,0,0.05),0_25px_60px_rgba(0,0,0,0.10)] transition-all duration-400 hover:-translate-y-1.5 hover:scale-[1.01] animate-float"
 			in:fly={{
 				y: 30,
 				duration: 1200
