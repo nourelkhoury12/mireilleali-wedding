@@ -187,13 +187,6 @@ html {
 
 }
 
-.venue-title{
-    font-family:"Cormorant Garamond",serif;
-    font-size:3rem;
-    color:#556B4F;
-    margin:1rem 0;
-}
-
 .venue-address{
     line-height:2;
     color:#555;

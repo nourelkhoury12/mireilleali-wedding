@@ -6,7 +6,7 @@
 <section class="content bg-secondary">
 	<p class="heading-5">Wedding Venue</p>
 
-	<h2 class="venue-title">Glamour Garden</h2>
+	<h2 class="heading-5">Glamour Garden</h2>
 
 	<p class="venue-address">
 		Daher Nassar<br>
