@@ -43,7 +43,6 @@
 		content="Join Ali & Mireille's wedding on 13 August 2026 at Glamour Garden, Daher Nassar Ilat, Akkar, Lebanon."
 	/>
 
-	<!-- Open Graph (WhatsApp / Facebook / Messenger) -->
 	<meta property="og:type" content="website" />
 
 	<meta
@@ -58,36 +57,22 @@
 
 	<meta
 		property="og:image"
-		content="https://YOUR-VERCEL-URL.vercel.app/invitation.png"
+		content="https://mireilleali-wedding.vercel.app/invitation.png"
 	/>
 
 	<meta
 		property="og:url"
-		content="https://YOUR-VERCEL-URL.vercel.app"
+		content="https://mireilleali-wedding.vercel.app/"
 	/>
 
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 
-	<!-- Twitter / Other social sharing -->
-	<meta
-		name="twitter:card"
-		content="summary_large_image"
-	/>
-
-	<meta
-		name="twitter:title"
-		content="Ali & Mireille Wedding"
-	/>
-
-	<meta
-		name="twitter:description"
-		content="13 August 2026 • 8:00 PM • Glamour Garden, Akkar, Lebanon"
-	/>
+	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta
 		name="twitter:image"
-		content="https://YOUR-VERCEL-URL.vercel.app/invitation.png"
+		content="https://mireilleali-wedding.vercel.app/invitation.png"
 	/>
 </svelte:head>
 
