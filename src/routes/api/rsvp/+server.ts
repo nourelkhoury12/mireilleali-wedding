@@ -28,7 +28,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		} = body;
 
 		// Required fields
-		if (!name || !email || !phone) {
+		if (!name || !phone) {
 			const response: ReservationResponse = {
 				success: false,
 				message: 'Please complete all required fields.'
@@ -51,7 +51,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		await db.insert(reservations).values({
 			name,
-			email,
+			email: email || null,
 			phone,
 			attend,
 			guests: guestCount,

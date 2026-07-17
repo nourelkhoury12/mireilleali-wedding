@@ -12,7 +12,7 @@ export const reservations = pgTable('reservations', {
 
 	id: serial('id').primaryKey(),
 	name: varchar('name', { length: 150 }).notNull(),
-	email: varchar('email', { length: 255 }).notNull(),
+	email: varchar('email', { length: 255 }),
 	phone: varchar('phone', { length: 30 }).notNull(),
 	attend: boolean('attend').notNull(),
 	guests: integer('guests').notNull().default(0),

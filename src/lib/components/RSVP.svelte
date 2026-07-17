@@ -100,7 +100,6 @@
 					class="input"
 					bind:value={form.email}
 					placeholder="Enter your email"
-					required
 				/>
 			</div>
 

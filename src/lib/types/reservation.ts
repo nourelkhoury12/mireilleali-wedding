@@ -1,6 +1,6 @@
 export interface ReservationRequest {
 	name: string;
-	email: string;
+	email?: string;
 	phone: string;
 	attend: boolean;
 	guests: number;
