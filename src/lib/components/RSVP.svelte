@@ -90,19 +90,6 @@
 				/>
 			</div>
 
-			<!-- Email -->
-			<div class="field">
-				<label class="label" for="email">Email *</label>
-
-				<input
-					id="email"
-					type="email"
-					class="input"
-					bind:value={form.email}
-					placeholder="Enter your email"
-				/>
-			</div>
-
 			<!-- Phone -->
 			<div class="field">
 				<label class="label" for="phone">Phone Number *</label>
@@ -114,6 +101,19 @@
 					bind:value={form.phone}
 					placeholder="+961 XX XXX XXX"
 					required
+				/>
+			</div>
+
+			<!-- Email -->
+			<div class="field">
+				<label class="label" for="email">Email </label>
+
+				<input
+					id="email"
+					type="email"
+					class="input"
+					bind:value={form.email}
+					placeholder="Enter your email"
 				/>
 			</div>
 
