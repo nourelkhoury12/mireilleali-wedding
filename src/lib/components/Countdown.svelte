@@ -51,34 +51,29 @@
 		Every moment brings us one step closer to celebrating together.
 	</p>
 
-	<div class="contdown-container flex justify-center items-center gap-9 flex-wrap">
-		<div class="min-w-[120px]">
-			<h3 class="heading-3">{days}</h3>
-			<span class="heading-2">Days</span>
-		</div>
+	<div class="grid grid-cols-2 gap-y-12 gap-x-8 justify-items-center md:flex md:justify-center md:items-center md:gap-16">
 
-		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
-
-		<div>
-			<h3 class="heading-3">{hours}</h3>
-			<span class="heading-2">Hours</span>
-		</div>
-
-		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
-
-		<div>
-			<h3 class="heading-3">{minutes}</h3>
-			<span class="heading-2">Minutes</span>
-		</div>
-
-		<div class="countdown-container max-md:grid max-md:grid-cols-2 max-md:gap-8"></div>
-
-		<div>
-			<h3 class="heading-3">{seconds}</h3>
-			<span class="heading-2">Seconds</span>
-		</div>
-
+	<div class="text-center">
+		<h3 class="heading-3">{days}</h3>
+		<span class="heading-2">Days</span>
 	</div>
+
+	<div class="text-center">
+		<h3 class="heading-3">{hours}</h3>
+		<span class="heading-2">Hours</span>
+	</div>
+
+	<div class="text-center">
+		<h3 class="heading-3">{minutes}</h3>
+		<span class="heading-2">Minutes</span>
+	</div>
+
+	<div class="text-center">
+		<h3 class="heading-3">{seconds}</h3>
+		<span class="heading-2">Seconds</span>
+	</div>
+
+</div>
 
 </section>
 
