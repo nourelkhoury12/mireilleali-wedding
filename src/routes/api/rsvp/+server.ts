@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 import { db } from '$lib/server/db';
-import { reservations } from '$lib/server/shecma';
+import { reservations } from '$lib/server/schema';
 
 import type {
 	ReservationRequest,
