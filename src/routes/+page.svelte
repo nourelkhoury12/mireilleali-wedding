@@ -53,7 +53,7 @@
 
 	<meta
 		property="og:image"
-		content="https://YOUR-VERCEL-URL.vercel.app/invitation.jpg"
+		content="https://YOUR-VERCEL-URL.vercel.app/invitation.png"
 	/>
 
 	<meta
@@ -76,7 +76,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://YOUR-VERCEL-URL.vercel.app/invitation.jpg"
+		content="https://YOUR-VERCEL-URL.vercel.app/invitation.png"
 	/>
 </svelte:head>
 
