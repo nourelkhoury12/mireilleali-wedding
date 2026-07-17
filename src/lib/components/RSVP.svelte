@@ -38,7 +38,7 @@
 				return;
 			}
 
-			successMessage = result.message;
+			successMessage = 'Thank you! Your reservation has been received. We look forward to celebrating with you.';
 
 			form = {
 				name: '',
@@ -48,6 +48,11 @@
 				guests: 1,
 				message: ''
 			};
+
+			setTimeout(() => {
+				successMessage = '';
+			}, 5000);
+
 		} catch {
 			errorMessage = 'Unable to submit your reservation.';
 		} finally {
@@ -61,9 +66,7 @@
 
 		<div class="text-center">
 
-		<h2 class="heading-5">
-			Reserve Your Seat
-		</h2>
+		<h2 class="heading-5">Reserve Your Seat</h2>
 
 		<p class="heading-4">
 			We would be honored to celebrate this special day with you.
@@ -73,153 +76,141 @@
 
 		<form class="form" on:submit|preventDefault={submitReservation}>
 
-	<!-- Full Name -->
-	<div class="field">
-		<label class="label" for="name">
-			Full Name *
-		</label>
+			<!-- Full Name -->
+			<div class="field">
+				<label class="label" for="name">Full Name *</label>
 
-		<input
-			id="name"
-			type="text"
-			class="input"
-			bind:value={form.name}
-			placeholder="Enter your full name"
-			required
-		/>
-	</div>
-
-	<!-- Email -->
-	<div class="field">
-		<label class="label" for="email">
-			Email *
-		</label>
-
-		<input
-			id="email"
-			type="email"
-			class="input"
-			bind:value={form.email}
-			placeholder="Enter your email"
-			required
-		/>
-	</div>
-
-	<!-- Phone -->
-	<div class="field">
-		<label class="label" for="phone">
-			Phone Number *
-		</label>
-
-		<input
-			id="phone"
-			type="tel"
-			class="input"
-			bind:value={form.phone}
-			placeholder="+961 XX XXX XXX"
-			required
-		/>
-	</div>
-
-	<!-- Attendance -->
-	<div class="field">
-
-		<label class="label">
-			Will you attend? *
-		</label>
-
-		<div class="radio-group">
-
-			<label class="radio">
 				<input
-					type="radio"
-					name="attendance"
-					value={true}
-					bind:group={form.attend}
-					checked
+					id="name"
+					type="text"
+					class="input"
+					bind:value={form.name}
+					placeholder="Enter your full name"
+					required
 				/>
+			</div>
 
-				<span>Joyfully Accept</span>
-			</label>
+			<!-- Email -->
+			<div class="field">
+				<label class="label" for="email">Email *</label>
 
-			<label class="radio">
 				<input
-					type="radio"
-					name="attendance"
-					value={false}
-					bind:group={form.attend}
+					id="email"
+					type="email"
+					class="input"
+					bind:value={form.email}
+					placeholder="Enter your email"
+					required
 				/>
+			</div>
 
-				<span>Regretfully Decline</span>
-			</label>
+			<!-- Phone -->
+			<div class="field">
+				<label class="label" for="phone">Phone Number *</label>
 
-		</div>
+				<input
+					id="phone"
+					type="tel"
+					class="input"
+					bind:value={form.phone}
+					placeholder="+961 XX XXX XXX"
+					required
+				/>
+			</div>
 
-	</div>
+			<!-- Attendance -->
+			<div class="field">
 
-	{#if form.attend}
+				<label for="presence" class="label">Will you attend? *</label>
 
-		<!-- Guests -->
-		<div class="field">
+				<div class="radio-group">
 
-			<label class="label" for="guests">
-				Number of Guests *
-			</label>
+					<label class="radio">
+						<input
+							type="radio"
+							name="attendance"
+							value={true}
+							bind:group={form.attend}
+							checked
+						/>
 
-			<select
-				id="guests"
-				class="select"
-				bind:value={form.guests}
-			>
-				<option value={1}>1 Guest</option>
-				<option value={2}>2 Guests</option>
-			</select>
+						<span>Joyfully Accept</span>
+					</label>
 
-		</div>
+					<label class="radio">
+						<input
+							type="radio"
+							name="attendance"
+							value={false}
+							bind:group={form.attend}
+						/>
 
-		<!-- Message -->
-		<div class="field">
+						<span>Regretfully Decline</span>
+					</label>
 
-			<label class="label" for="message">
-				Message (Optional)
-			</label>
+				</div>
 
-			<textarea
-				id="message"
-				class="textarea"
-				rows="5"
-				bind:value={form.message}
-				placeholder="Share your wishes with Ali & Mireille..."
-			></textarea>
+			</div>
 
-		</div>
+			{#if form.attend}
 
-	{/if}
+				<!-- Guests -->
+				<div class="field">
 
-	<button
-		type="submit"
-		class="btn-variant-filled"
-		disabled={loading}
-	>
-		{#if loading}
-			Submitting...
-		{:else}
-			{form.attend ? 'Reserve My Seat' : 'Send My Regrets'}
-		{/if}
-	</button>
+					<label class="label" for="guests">
+						Number of Guests *
+					</label>
 
-	{#if successMessage}
-		<p class="success">
-			{successMessage}
-		</p>
-	{/if}
+					<select
+						id="guests"
+						class="select"
+						bind:value={form.guests}
+					>
+						<option value={1}>1 Guest</option>
+						<option value={2}>2 Guests</option>
+					</select>
 
-	{#if errorMessage}
-		<p class="error">
-			{errorMessage}
-		</p>
-	{/if}
+				</div>
 
-</form>
+				<!-- Message -->
+				<div class="field">
+
+					<label class="label" for="message">
+						Message (Optional)
+					</label>
+
+					<textarea
+						id="message"
+						class="textarea"
+						rows="5"
+						bind:value={form.message}
+						placeholder="Share your wishes with Ali & Mireille..."
+					></textarea>
+
+				</div>
+
+			{/if}
+
+			<button type="submit" class="btn-variant-filled" disabled={loading}>
+				{#if loading}
+					Submitting...
+				{:else}
+					{form.attend ? 'Reserve My Seat' : 'Send My Regrets'}
+				{/if}
+			</button>
+
+			{#if successMessage}
+				<p class="success">
+					{successMessage}
+				</p>
+			{/if}
+
+			{#if errorMessage}
+				<p class="error">
+					{errorMessage}
+				</p>
+			{/if}
+
+		</form>
 	</div>
 </section>
