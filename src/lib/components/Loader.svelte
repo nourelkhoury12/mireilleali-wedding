@@ -25,11 +25,11 @@
 	<img
 		src={Image}
 		alt="Blue Project"
-		class="mb-12 h-28 w-auto object-contain md:h-36"
+		class="mb-12 h-24 w-auto object-contain"
 	/>
 
-	<div class="mb-10 h-1 w-72 overflow-hidden rounded-full bg-slate-200 md:w-96">
-		<div class="loader-line h-full bg-blue-600"></div>
+	<div class="mb-10 h-1 w-64 overflow-hidden rounded-full bg-slate-200 md:w-96">
+		<div class="loader-line h-full bg-[#5e9df0]"></div>
 	</div>
 
 	<h3 class="text-center text-xl text-slate-700 md:text-2xl">
