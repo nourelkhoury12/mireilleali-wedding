@@ -11,7 +11,12 @@ import type {
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
+		console.log("=== RSVP API CALLED ===");
+		console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
+
 		const body: ReservationRequest = await request.json();
+		console.log("Request body:", body);
+		//const body: ReservationRequest = await request.json();
 
 		const {
 			name,
@@ -53,6 +58,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			message: message || null
 		});
 
+		console.log("Reservation inserted successfully");
 		const response: ReservationResponse = {
 			success: true,
 			message: 'Thank you! Your RSVP has been received.'
