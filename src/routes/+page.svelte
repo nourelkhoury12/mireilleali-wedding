@@ -40,11 +40,16 @@
 
 	<meta
 		name="description"
-		content="Join Ali & Mireille's wedding on 13 August 2026 at Glamour Garden, Akkar, Lebanon."
+		content="Join Ali & Mireille's wedding on 13 August 2026 at Glamour Garden, Daher Nassar Ilat, Akkar, Lebanon."
 	/>
 
-	<!-- WhatsApp / Facebook Preview -->
-	<meta property="og:title" content="Ali & Mireille Wedding" />
+	<!-- Open Graph (WhatsApp / Facebook / Messenger) -->
+	<meta property="og:type" content="website" />
+
+	<meta
+		property="og:title"
+		content="Ali & Mireille Wedding"
+	/>
 
 	<meta
 		property="og:description"
@@ -61,19 +66,25 @@
 		content="https://YOUR-VERCEL-URL.vercel.app"
 	/>
 
-	<meta property="og:type" content="website" />
-
-	<!-- WhatsApp uses this -->
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 
-	<!-- Browser sharing -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Ali & Mireille Wedding" />
+	<!-- Twitter / Other social sharing -->
+	<meta
+		name="twitter:card"
+		content="summary_large_image"
+	/>
+
+	<meta
+		name="twitter:title"
+		content="Ali & Mireille Wedding"
+	/>
+
 	<meta
 		name="twitter:description"
 		content="13 August 2026 • 8:00 PM • Glamour Garden, Akkar, Lebanon"
 	/>
+
 	<meta
 		name="twitter:image"
 		content="https://YOUR-VERCEL-URL.vercel.app/invitation.png"
