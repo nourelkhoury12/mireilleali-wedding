@@ -8,7 +8,7 @@
 
 	<h2 class="heading-5">Glamour Garden</h2>
 
-	<p class="venue-address">
+	<p class="leading-8 text-[1.1rem] text-[#555]">
 		Daher Nassar<br>
 		Ilat, Akkar<br>
 		Lebanon

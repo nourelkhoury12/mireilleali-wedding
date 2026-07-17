@@ -71,63 +71,155 @@
 		</p>
 		</div>
 
-		<form on:submit|preventDefault={submitReservation}>
+		<form class="form" on:submit|preventDefault={submitReservation}>
 
-			<!-- Full Name -->
-			<div class="rsvp-field">
-				<label class="rsvp-label" for="name">Full Name *</label>
-				<input id="name" bind:value={form.name} type="text" class="rsvp-input" placeholder="Enter your full name" required/>
-			</div>
+	<!-- Full Name -->
+	<div class="field">
+		<label class="label" for="name">
+			Full Name *
+		</label>
 
-			<!--Email-->
-			<div class="rsvp-field">
-				<label class="rsvp-label" for="name">Email *</label>
-				<input id="email" bind:value={form.email} type="email" class="rsvp-input" placeholder="Enter your email" required/>
-			</div>
+		<input
+			id="name"
+			type="text"
+			class="input"
+			bind:value={form.name}
+			placeholder="Enter your full name"
+			required
+		/>
+	</div>
 
-			<!-- Phone -->
-			<div class="rsvp-field">
-				<label class="rsvp-label" for="phone">Phone Number *</label>
-				<input id="phone" bind:value={form.phone} type="tel" class="rsvp-input" placeholder="+961 XX XXX XXX" required/>
-			</div>
+	<!-- Email -->
+	<div class="field">
+		<label class="label" for="email">
+			Email *
+		</label>
 
-			<!-- Attendance -->
-			<div class="rsvp-field">
-				<label  for="q" class="rsvp-label">Will you attend? *</label>
+		<input
+			id="email"
+			type="email"
+			class="input"
+			bind:value={form.email}
+			placeholder="Enter your email"
+			required
+		/>
+	</div>
 
-				<div class="rsvp-radio-group">
-					<label class="rsvp-radio">
-						<input type="radio" bind:group={form.attend} value={true} name="attendance" checked/>
-						<span>Joyfully Accept</span>
-					</label>
+	<!-- Phone -->
+	<div class="field">
+		<label class="label" for="phone">
+			Phone Number *
+		</label>
 
-					<label class="rsvp-radio">
-						<input type="radio" value={false} bind:group={form.attend} name="attendance"/>
-						<span>Regretfully Decline</span>
-					</label>
-				</div>
-			</div>
+		<input
+			id="phone"
+			type="tel"
+			class="input"
+			bind:value={form.phone}
+			placeholder="+961 XX XXX XXX"
+			required
+		/>
+	</div>
 
-			<!-- Guests -->
-			 {#if form.attend}
-				<div class="rsvp-field">
-					<label class="rsvp-label" for="guests">
-						Number of Guests *
-					</label>
+	<!-- Attendance -->
+	<div class="field">
 
-					<select bind:value={form.guests} class="rsvp-select">
-						<option value={1}>1 Guest</option>
-						<option value={2}>2 Guests</option>
-					</select>
-				</div>
+		<label class="label">
+			Will you attend? *
+		</label>
 
-				<!-- Message -->
-				<div class="rsvp-field">
-					<label class="rsvp-label" for="message">Message (Optional)</label>
-					<textarea id="message" bind:value={form.message} class="rsvp-textarea" rows="5" placeholder="Share your wishes with Ali & Mireille..."></textarea>
-				</div>
-			{/if}
-			<button type="submit" class="btn-variant-filled">{form.attend ? 'Reserve My Seat' : 'Send My Regrets'}</button>
-		</form>
+		<div class="radio-group">
+
+			<label class="radio">
+				<input
+					type="radio"
+					name="attendance"
+					value={true}
+					bind:group={form.attend}
+					checked
+				/>
+
+				<span>Joyfully Accept</span>
+			</label>
+
+			<label class="radio">
+				<input
+					type="radio"
+					name="attendance"
+					value={false}
+					bind:group={form.attend}
+				/>
+
+				<span>Regretfully Decline</span>
+			</label>
+
+		</div>
+
+	</div>
+
+	{#if form.attend}
+
+		<!-- Guests -->
+		<div class="field">
+
+			<label class="label" for="guests">
+				Number of Guests *
+			</label>
+
+			<select
+				id="guests"
+				class="select"
+				bind:value={form.guests}
+			>
+				<option value={1}>1 Guest</option>
+				<option value={2}>2 Guests</option>
+			</select>
+
+		</div>
+
+		<!-- Message -->
+		<div class="field">
+
+			<label class="label" for="message">
+				Message (Optional)
+			</label>
+
+			<textarea
+				id="message"
+				class="textarea"
+				rows="5"
+				bind:value={form.message}
+				placeholder="Share your wishes with Ali & Mireille..."
+			></textarea>
+
+		</div>
+
+	{/if}
+
+	<button
+		type="submit"
+		class="btn-variant-filled"
+		disabled={loading}
+	>
+		{#if loading}
+			Submitting...
+		{:else}
+			{form.attend ? 'Reserve My Seat' : 'Send My Regrets'}
+		{/if}
+	</button>
+
+	{#if successMessage}
+		<p class="success">
+			{successMessage}
+		</p>
+	{/if}
+
+	{#if errorMessage}
+		<p class="error">
+			{errorMessage}
+		</p>
+	{/if}
+
+</form>
 	</div>
 </section>
