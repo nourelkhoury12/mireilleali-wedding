@@ -106,24 +106,25 @@
 			</div>
 
 			<!-- Guests -->
-			<div class="rsvp-field">
-				<label class="rsvp-label" for="guests">
-					Number of Guests *
-				</label>
+			 {#if form.attend}
+				<div class="rsvp-field">
+					<label class="rsvp-label" for="guests">
+						Number of Guests *
+					</label>
 
-				<select bind:value={form.guests} class="rsvp-select">
-					<option value={1}>1 Guest</option>
-					<option value={2}>2 Guests</option>
-				</select>
-			</div>
+					<select bind:value={form.guests} class="rsvp-select">
+						<option value={1}>1 Guest</option>
+						<option value={2}>2 Guests</option>
+					</select>
+				</div>
 
-			<!-- Message -->
-			<div class="rsvp-field">
-				<label class="rsvp-label" for="message">Message (Optional)</label>
-				<textarea id="message" bind:value={form.message} class="rsvp-textarea" rows="5" placeholder="Share your wishes with Ali & Mireille..."></textarea>
-			</div>
-
-			<button type="submit" class="btn-variant-filled">Reserve My Seat</button>
+				<!-- Message -->
+				<div class="rsvp-field">
+					<label class="rsvp-label" for="message">Message (Optional)</label>
+					<textarea id="message" bind:value={form.message} class="rsvp-textarea" rows="5" placeholder="Share your wishes with Ali & Mireille..."></textarea>
+				</div>
+			{/if}
+			<button type="submit" class="btn-variant-filled">{form.attend ? 'Reserve My Seat' : 'Send My Regrets'}</button>
 		</form>
 	</div>
 </section>
