@@ -59,6 +59,8 @@
 <section class="content bg-primary">
 	<div class="Card bg-white">
 
+		<div class="text-center">
+
 		<h2 class="heading-5">
 			Reserve Your Seat
 		</h2>
@@ -67,6 +69,7 @@
 			We would be honored to celebrate this special day with you.
 			Kindly confirm your attendance by filling out the form below.
 		</p>
+		</div>
 
 		<form on:submit|preventDefault={submitReservation}>
 

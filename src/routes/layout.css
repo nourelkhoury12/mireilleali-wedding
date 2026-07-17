@@ -18,7 +18,6 @@ html {
 .content{
     width: 100%;
 	padding:5rem 1.5rem;
-	text-align: center;
 }
 
 .heading-1{
@@ -112,7 +111,6 @@ html {
 .Card{
 	max-width:700px;
 	margin:auto;
-	text-align:center;
 	padding:4rem;
 	border-radius:24px;
 	border:1px solid rgba(85,107,79,.12);
@@ -166,7 +164,6 @@ html {
 	gap:2rem;
 	flex-wrap:wrap;
 }
-
 
 @media (max-width:768px){
 
@@ -283,4 +280,73 @@ html {
 .back-to-top:hover {
 	transform: translateY(-4px);
 	background: #a67c3d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: #556B4F;
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: .5px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #eceee7;
+    color: #555;
+    vertical-align: top;
+}
+
+tbody tr {
+    transition: .25s;
+}
+
+tbody tr:hover {
+    background: #faf8f3;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.status-yes {
+    background: rgba(85,107,79,.12);
+    color: #556B4F;
+}
+
+.status-no {
+    background: rgba(196,72,72,.12);
+    color: #b03b3b;
+}
+
+@media (max-width:768px){
+
+    .Card{
+        padding:1.5rem;
+    }
+
+    table{
+        min-width:850px;
+    }
+
 }

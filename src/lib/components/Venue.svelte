@@ -3,7 +3,7 @@
 		'https://www.google.com/maps/place/glamour+garden+akkar/data=!4m2!3m1!1s0x15223b226ec2bc0f:0x6a82399b64644f55?sa=X&ved=1t:242&ictx=111';
 </script>
 
-<section class="content bg-secondary">
+<section class="content text-center bg-secondary">
 	<p class="heading-5">Wedding Venue</p>
 
 	<h2 class="heading-5">Glamour Garden</h2>

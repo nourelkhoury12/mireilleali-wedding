@@ -1,4 +1,4 @@
-<section class="content bg-secondary">
+<section class="content text-center bg-secondary">
 
 	<div class="Card bg-whiter">
 

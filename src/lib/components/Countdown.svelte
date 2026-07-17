@@ -37,7 +37,7 @@
 	});
 </script>
 
-<section class="content bg-primary">
+<section class="content text-center bg-primary">
 
 	<p class="heading-5">
 		13 August 2026 • 8:00 PM
