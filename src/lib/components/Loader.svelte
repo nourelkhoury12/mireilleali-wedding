@@ -1,6 +1,6 @@
 <script lang="ts">
     import Image from "$lib/assets/logob.png"
-	const text = "Developed by Blue Project...";
+	const text = "Developed by bluProject...";
 
 	let visible = $state("");
 
