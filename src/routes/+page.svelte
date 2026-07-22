@@ -107,7 +107,7 @@
 	<CountDown />
 	<Venue />
 	<RSVP />
-	<MarriageList />
+	<!-- <MarriageList /> -->
 	<Footer />
 
 	{#if showButton}
